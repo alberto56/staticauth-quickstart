@@ -1,0 +1,35 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body id="page-top">
+        {% include nav.html %}
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">Blog</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Content section 1-->
+        <section id="scroll">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-12">
+                        <div class="p-5">
+                            {% for blog in site.categories.blog %}
+                            <h2 class="display-4">{{ blog.title }}</h2>
+                            <p>{{ blog.content | strip_html | truncate: 100 }}</p>
+                            <p><a href="{{ blog.url }}">Read More</a></p>
+                            <hr/>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% include footer.html %}
+    </body>
+</html>
