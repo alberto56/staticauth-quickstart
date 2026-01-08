@@ -8,7 +8,7 @@ backend:
   repo: alberto56/staticauth-quickstart
   branch: main
   base_url: https://suresh-issue-82.dcycleproject.org
-  auth_endpoint: /auth/github/repo/695db60f7119694897ef584a
+  auth_endpoint: /auth/github/repo/69600b24cfdbcf25779060d6
 media_folder: docs/media
 public_folder: /media
 collections:
